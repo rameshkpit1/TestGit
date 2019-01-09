@@ -47,4 +47,12 @@ we do 3 types of configuration
    git add .  # file will move to staging area
    git status # It will show us status of the file
    git commit -m "Git file added" # this will move the file from staging to local repository.
+   git log
+   git log --oneline
+   git log --author="ramesh"
+   git log --grep="string to search in commit messages"
+   git log --since "1hr"
+   git show commit_id
+   
+ git doesnot track empty files.
    
