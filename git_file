@@ -49,7 +49,7 @@ we do 3 types of configuration
    git commit -m "Git file added" # this will move the file from staging to local repository.
    (or)
    how to add and commit a file in a single step?
-   git commit -ma "commit message"  # This will be applicable only existed files only.If use this command with new file then you will get an error.If you want to add new file then you must use git add . and then git commit -m "message" only.
+   git commit -am "commit message"  # This will be applicable only existed files only.If use this command with new file then you will get an error.If you want to add new file then you must use git add . and then git commit -m "message" only.
    git log
    git log --oneline
    git log --author="ramesh"
@@ -91,3 +91,18 @@ git branch -D branch_name # it is used to delete branch forcefully.
 
 git rm & git mv:
 
+if you delete a file with just rm command. then you must add the change to stage and local repository as well.
+
+rm file1
+git status # It will show below 
+
+Your branch is ahead of 'origin/master' by 8 commits.
+  (use "git push" to publish your local commits)
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        deleted:    test.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
