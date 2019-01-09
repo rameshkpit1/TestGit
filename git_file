@@ -47,18 +47,33 @@ we do 3 types of configuration
    git add .  # file will move to staging area
    git status # It will show us status of the file
    git commit -m "Git file added" # this will move the file from staging to local repository.
+   (or)
+   how to add and commit a file in a single step?
+   git commit -ma "commit message"  # This will be applicable only existed files only.If use this command with new file then you will get an error.If you want to add new file then you must use git add . and then git commit -m "message" only.
    git log
    git log --oneline
    git log --author="ramesh"
    git log --grep="string to search in commit messages"
    git log --since "1hr"
    git log --until=2017-08-09"
-   git show commit_id
+   git show commit_id # it is used to see the content of that commit id.
    git checkout commit_id ## to go into specified file changes with this commit id
    
  git does not track empty files.
    
    git diff commit_id1..commit_id2 # To see difference between commit to commit.
+   
+ how to change commit message?
+ 
+ This will be applicable only for latest commit id only.
+ 
+ git commit --amend -m "new commit message"
+ 
+ if you want to change commit message and also add modified other file into same commit id then we use.
+ 
+ test3 here is modified file. new commit message is changing latest commit id message with new.
+ 
+ git commit --amend -m "new commit message" test3
    
 ==========================================================
 Branches:
@@ -71,3 +86,8 @@ git merge branch_name # to merge branch with master branch or if any parent bran
 git diff branch1..branch2 # it will display the difference between branch1 and branch2.
 git branch -d branch_name # it is used to delete branch.if you want to delete f1 branch then you should be on master branch.
 git branch -D branch_name # it is used to delete branch forcefully.
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+git rm & git mv:
+
