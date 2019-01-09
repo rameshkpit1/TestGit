@@ -52,7 +52,9 @@ we do 3 types of configuration
    git log --author="ramesh"
    git log --grep="string to search in commit messages"
    git log --since "1hr"
+   git log --until=2017-08-09"
    git show commit_id
    
  git doesnot track empty files.
    
+   git diff commit_id1..commit_id2 # To see difference between commit to commit.
